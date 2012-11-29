@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Trackr</title>
+	
+	<link href="http://jeromeetienne.github.com/jquery-mobile-960/css/jquery-mobile-960.min.css" />
+	
+	<!-- iphone meta -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<link rel="apple-touch-icon" href="/media/images/icon.png"/>
+	
+	<!-- jquery mobile -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+  <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="homepage">
+      <div data-role="header" data-theme="b">
+    		<h1>Trackr</h1>
+    	</div>
+
+    
+      <div data-role="content">
+        <label for="basic">Would you like to hear more from us? If so, enter in your email address and we'll send you periodic updates!</label>
+        <input type="text" name="text" id="email" value="" placeholder="Enter your email address" />
+        
+        <script>
+        function submitForm(withEmail) {
+          if (withEmail) {
+            formInfo.email = $("#email")[0].value;
+          }
+          
+          var sources = [];
+          for (var key in formInfo.sources) {
+            if (formInfo.sources[key]) {
+              sources.push(formInfo.sources[key]);
+            }
+          }
+          
+          $.ajax({
+            url: "https://docs.google.com/spreadsheet/formResponse?formkey=dDE5UzF6OGN0RjREZ0xFUldJZlhrV1E6MQ&amp;ptok=8087016065316783120&amp;ifq",
+            data: {
+              "entry.3.group": formInfo.customer,
+              "entry.1.group": sources.join(', '),
+              "entry.6.single": formInfo.email ? formInfo.email : ""
+            }
+          })
+        }
+        function submitEmail() {
+          submitForm(true);
+          
+        }
+        function submitNoEmail() {
+          submitForm(false);
+        }
+        
+        </script>
+        
+        <a onclick="submitEmail()" href="thanks.html" data-role="button" data-theme="e">Submit</a>
+        <div style="text-align:center; padding-top:10px">
+          <a onclick="submitNoEmail()" href="thanks.html">No thanks</a>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

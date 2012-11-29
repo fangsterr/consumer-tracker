@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Trackr</title>
+	
+	<link href="http://jeromeetienne.github.com/jquery-mobile-960/css/jquery-mobile-960.min.css" />
+	
+	<!-- iphone meta -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<link rel="apple-touch-icon" href="/media/images/icon.png"/>
+	
+	<!-- jquery mobile -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+  <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="homepage">
+      <div data-role="header" data-theme="b">
+    		<h1>Trackr</h1>
+    	</div>
+      
+      
+      <script>
+      
+      formInfo.sources = {};
+      function yelp() {
+        formInfo.sources.yelp = $("#yelp-choice")[0].checked ? "Yelp" : false;
+      }
+      
+      function newspaper() {
+        formInfo.sources.newspaper = $("#newspaper-choice")[0].checked ? "Newspaper Ads" : false;
+      }
+      
+      function facebook() {
+        formInfo.sources.facebook = $("#facebook-choice")[0].checked ? "Facebook" : false;
+      }
+      </script>
+    
+      <div data-role="content">
+        <fieldset data-role="controlgroup">
+          <legend>How did you hear about us?</legend>
+          <input
+            onclick="yelp()"
+            type="checkbox"
+            name="checkbox-choice"
+            id="yelp-choice"
+            value="yelp"
+          />
+          <label for="yelp-choice">Yelp</label>
+          
+          <input
+            onclick="newspaper()"
+            type="checkbox"
+            name="checkbox-choice"
+            id="newspaper-choice"
+            value="newspaper"
+          />
+          <label for="newspaper-choice">Newspaper Ad</label>
+          
+          <input
+            onclick="facebook()"
+            type="checkbox"
+            name="checkbox-choice"
+            id="facebook-choice"
+            value="facebook"
+          />
+          <label for="facebook-choice">Facebook</label>
+        </fieldset>
+        
+        <a href="form3.html" data-role="button"
+          data-icon="arrow-r" data-iconpos="right" data-theme="b">Continue</a>
+      </div>
+    </div>
+</body>
+</html>

@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Countertop</title>
+	<title>Welcome to Chantal Guillon</title>
 	
 	<link href="http://jeromeetienne.github.com/jquery-mobile-960/css/jquery-mobile-960.min.css" />
 	
@@ -23,7 +23,7 @@
 <body>
     <div data-role="page" id="homepage">
       <div data-role="header" data-theme="b">
-    		<h1>Countertop</h1>
+    		<h1>Welcome to Chantal Guillon</h1>
     	</div>
       
       
@@ -32,46 +32,99 @@
       formInfo.sources = {};
       function yelp() {
         formInfo.sources.yelp = $("#yelp-choice")[0].checked ? "Yelp" : false;
+        
       }
       
-      function newspaper() {
-        formInfo.sources.newspaper = $("#newspaper-choice")[0].checked ? "Newspaper Ads" : false;
+      function press() {
+        formInfo.sources.press = $("#press-choice")[0].checked ? "Press" : false;
       }
       
       function facebook() {
         formInfo.sources.facebook = $("#facebook-choice")[0].checked ? "Facebook" : false;
+      }
+      
+      function friend() {
+        formInfo.sources.friend = $("#facebook-choice")[0].checked ? "Friend/Relative" : false;
+      }
+      
+      function website() {
+        formInfo.sources.website = $("#website-choice")[0].checked ? "Our Website" : false;
+      }
+      
+      function walkin() {
+        formInfo.sources.walkin = $("#walkin-choice")[0].checked ? "Walk-In" : false;
+      }
+      
+      function other() {
+        formInfo.sources.other = $("#other-choice")[0].checked ? "Other" : false;
       }
       </script>
     
       <div data-role="content">
         <fieldset data-role="controlgroup">
           <legend>How did you hear about us?</legend>
-          <input
+          <a href="form3.html" style="text-decoration:none"><input
             onclick="yelp()"
             type="checkbox"
             name="checkbox-choice"
             id="yelp-choice"
             value="yelp"
-          />
+          /> </a>
           <label for="yelp-choice">Yelp</label>
           
-          <input
-            onclick="newspaper()"
+          <a href="form3.html" style="text-decoration:none"><input
+            onclick="press()"
             type="checkbox"
             name="checkbox-choice"
-            id="newspaper-choice"
-            value="newspaper"
-          />
-          <label for="newspaper-choice">Newspaper Ad</label>
+            id="press-choice"
+            value="press"
+          /></a>
+          <label for="press-choice">Press</label>
           
-          <input
+          <a href="form3.html" style="text-decoration:none"><input
+            onclick="friend()"
+            type="checkbox"
+            name="checkbox-choice"
+            id="friend-choice"
+            value="friend"
+          /></a>
+          <label for="friend-choice">Friend or Relative</label>
+          
+          <a href="form3.html" style="text-decoration:none"><input
+            onclick="website()"
+            type="checkbox"
+            name="checkbox-choice"
+            id="website-choice"
+            value="website"
+          /></a>
+          <label for="website-choice">Our Website</label>
+          
+          <a href="form3.html" style="text-decoration:none"><input
             onclick="facebook()"
             type="checkbox"
             name="checkbox-choice"
             id="facebook-choice"
             value="facebook"
-          />
+          /></a>
           <label for="facebook-choice">Facebook</label>
+          
+          <a href="form3.html" style="text-decoration:none"><input
+            onclick="walkin()"
+            type="checkbox"
+            name="checkbox-choice"
+            id="walkin-choice"
+            value="walkin"
+          /></a>
+          <label for="walkin-choice">Walk-In</label>
+          
+          <a href="form3.html" style="text-decoration:none"><input
+            onclick="other()"
+            type="checkbox"
+            name="checkbox-choice"
+            id="other-choice"
+            value="other"
+          /></a>
+          <label for="other-choice">Other</label>
         </fieldset>
         
         <a href="form3.html" data-role="button"

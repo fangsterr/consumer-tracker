@@ -28,8 +28,8 @@
 
     
       <div data-role="content">
-        <label for="basic">Would you like to hear more from us? If so, enter in your email address and we'll send you periodic updates!</label>
-        <input type="text" name="text" id="email" value="" placeholder="Enter your email address" />
+        <center><div style="width:50%"><label style="width:50%" for="basic">Would you like to hear more from us? If so, enter in your email address and we'll send you periodic updates!</label></div>
+        <input style="width:50%" type="text" name="text" id="email" value="" placeholder="Enter your email address" />
         
         <script>
         function submitForm(withEmail) {
@@ -37,18 +37,11 @@
             formInfo.email = $("#email")[0].value;
           }
           
-          var sources = [];
-          for (var key in formInfo.sources) {
-            if (formInfo.sources[key]) {
-              sources.push(formInfo.sources[key]);
-            }
-          }
-          
           $.ajax({
             url: "https://docs.google.com/spreadsheet/formResponse?formkey=dDE5UzF6OGN0RjREZ0xFUldJZlhrV1E6MQ&amp;ptok=8087016065316783120&amp;ifq",
             data: {
               "entry.3.group": formInfo.customer,
-              "entry.1.group": sources.join(', '),
+              "entry.1.group": formInfo.sources,
               "entry.6.single": formInfo.email ? formInfo.email : ""
             }
           })
@@ -63,7 +56,7 @@
         
         </script>
         
-        <a onclick="submitEmail()" href="thanks.html" data-role="button" data-theme="e">Submit</a>
+        <a style="width:50%" onclick="submitEmail()" href="thanks.html" data-role="button" data-theme="e">Submit</a></center>
         <div style="text-align:center; padding-top:10px">
           <a onclick="submitNoEmail()" href="thanks.html">No thanks</a>
         </div>

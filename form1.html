@@ -28,7 +28,7 @@
 	
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 </head>
-<body>
+<body style="width:80px">
     <div data-role="page" id="homepage">
       <div data-role="header" data-theme="b">
     		<h1>Welcome to Chantal Guillon</h1>
@@ -38,19 +38,19 @@
       var formInfo = {};
       
       function newCustomerClicked() {
-        formInfo.customer="I'm a new customer.";
+        formInfo.customer="new";
       }
       
       function returningCustomerClicked() {
-        formInfo.customer="I'm a returning customer.";
+        formInfo.customer="returning";
       }
       
       </script>
       
       <div data-role="content">
-        <a onclick="newCustomerClicked()" href="form2.html" data-role="button">I'm a new customer</a>
+        <center><a style="width:50%" onclick="newCustomerClicked()" href="form2.html" data-role="button">I'm new</a></center>
 
-        <a onclick="returningCustomerClicked()" href="form3.html" data-role="button">I'm a returning customer</a>
+        <center><a style="width:50%" onclick="returningCustomerClicked()" href="form3.html" data-role="button">I've been here before</a></center>
       </div>
     </div>
 </body>

@@ -29,106 +29,104 @@
       
       <script>
       
-      formInfo.sources = {};
+      formInfo.sources = "";
       function yelp() {
-        formInfo.sources.yelp = $("#yelp-choice")[0].checked ? "Yelp" : false;
+        formInfo.sources = "Yelp";
         
       }
       
       function press() {
-        formInfo.sources.press = $("#press-choice")[0].checked ? "Press" : false;
+        formInfo.sources = "Press";
       }
       
       function facebook() {
-        formInfo.sources.facebook = $("#facebook-choice")[0].checked ? "Facebook" : false;
+        formInfo.sources = "Facebook";
       }
       
       function friend() {
-        formInfo.sources.friend = $("#facebook-choice")[0].checked ? "Friend/Relative" : false;
+        formInfo.sources = "Friend/Relative"
       }
       
       function website() {
-        formInfo.sources.website = $("#website-choice")[0].checked ? "Our Website" : false;
+        formInfo.sources = "Our Website";
       }
       
       function walkin() {
-        formInfo.sources.walkin = $("#walkin-choice")[0].checked ? "Walk-In" : false;
+        formInfo.sources = "Walk-in"
       }
       
       function other() {
-        formInfo.sources.other = $("#other-choice")[0].checked ? "Other" : false;
+        formInfo.sources = "Other";
       }
       </script>
     
       <div data-role="content">
-        <fieldset data-role="controlgroup">
+        <center><fieldset data-role="controlgroup" style="width:50%">
           <legend>How did you hear about us?</legend>
-          <a href="form3.html" style="text-decoration:none"><input
+          <ul data-role="listview" style="padding-top:10px">
+          <li data-icon="false"><a href="form3.html" style="text-decoration:none"
             onclick="yelp()"
             type="checkbox"
             name="checkbox-choice"
             id="yelp-choice"
             value="yelp"
-          /> </a>
-          <label for="yelp-choice">Yelp</label>
+          >
+          <label for="yelp-choice"><center>Yelp</center></label></a></li>
           
-          <a href="form3.html" style="text-decoration:none"><input
+          <li data-icon="false"><a href="form3.html" style="text-decoration:none"
             onclick="press()"
             type="checkbox"
             name="checkbox-choice"
             id="press-choice"
             value="press"
-          /></a>
-          <label for="press-choice">Press</label>
+          >
+          <label for="press-choice"><center>Press</center></label></a></li>
           
-          <a href="form3.html" style="text-decoration:none"><input
+          <li data-icon="false"><a href="form3.html" style="text-decoration:none"
             onclick="friend()"
             type="checkbox"
             name="checkbox-choice"
             id="friend-choice"
             value="friend"
-          /></a>
-          <label for="friend-choice">Friend or Relative</label>
+          >
+          <label for="friend-choice"><center>Friend or Relative</center></label></a></li>
           
-          <a href="form3.html" style="text-decoration:none"><input
+          <li data-icon="false"><a href="form3.html" style="text-decoration:none"
             onclick="website()"
             type="checkbox"
             name="checkbox-choice"
             id="website-choice"
             value="website"
-          /></a>
-          <label for="website-choice">Our Website</label>
+          >
+          <label for="website-choice"><center>Our Website</center></label></a></li>
           
-          <a href="form3.html" style="text-decoration:none"><input
+          <li data-icon="false"><a href="form3.html" style="text-decoration:none"
             onclick="facebook()"
             type="checkbox"
             name="checkbox-choice"
             id="facebook-choice"
             value="facebook"
-          /></a>
-          <label for="facebook-choice">Facebook</label>
+          >
+          <label for="facebook-choice"><center>Facebook</center></label></a></li>
           
-          <a href="form3.html" style="text-decoration:none"><input
+          <li data-icon="false"><a href="form3.html" style="text-decoration:none"
             onclick="walkin()"
             type="checkbox"
             name="checkbox-choice"
             id="walkin-choice"
             value="walkin"
-          /></a>
-          <label for="walkin-choice">Walk-In</label>
+          >
+          <label for="walkin-choice"><center>Walk-In</center></label></a></li>
           
-          <a href="form3.html" style="text-decoration:none"><input
+          <li data-icon="false"><a href="form3.html" style="text-decoration:none"
             onclick="other()"
             type="checkbox"
             name="checkbox-choice"
             id="other-choice"
             value="other"
-          /></a>
-          <label for="other-choice">Other</label>
-        </fieldset>
-        
-        <a href="form3.html" data-role="button"
-          data-icon="arrow-r" data-iconpos="right" data-theme="b">Continue</a>
+          >
+          <label for="other-choice"><center>Other</center></label></a></li></ul>
+        </fieldset></center>        
       </div>
     </div>
 </body>
